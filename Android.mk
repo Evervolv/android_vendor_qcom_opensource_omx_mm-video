@@ -4,7 +4,7 @@ include $(CLEAR_VARS)
 ifeq ($(BOARD_USES_QCOM_HARDWARE),true)
 
 ifeq ($(TARGET_BOARD_PLATFORM),qsd8k)
-    include $(OMX_VIDEO_PATH)/qdsp6/vdec/Android.mk
+#    include $(OMX_VIDEO_PATH)/qdsp6/vdec/Android.mk
     include $(OMX_VIDEO_PATH)/qdsp6/venc/Android.mk
 endif
 
