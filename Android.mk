@@ -14,11 +14,11 @@ endif
 #    include $(OMX_VIDEO_PATH)/DivxDrmDecrypt/Android.mk
 #endif
 
-#ifeq ($(TARGET_BOARD_PLATFORM),msm8660)
-#    include $(OMX_VIDEO_PATH)/vidc/vdec/Android.mk
-#    include $(OMX_VIDEO_PATH)/vidc/venc/Android.mk
-#    include $(OMX_VIDEO_PATH)/DivxDrmDecrypt/Android.mk
-#endif
+ifeq ($(TARGET_BOARD_PLATFORM),msm8660)
+    include $(OMX_VIDEO_PATH)/vidc/vdec/Android.mk
+    include $(OMX_VIDEO_PATH)/vidc/venc/Android.mk
+    include $(OMX_VIDEO_PATH)/DivxDrmDecrypt/Android.mk
+endif
 
 #ifeq ($(TARGET_BOARD_PLATFORM),msm8960)
 #    include $(OMX_VIDEO_PATH)/vidc/vdec/Android.mk
