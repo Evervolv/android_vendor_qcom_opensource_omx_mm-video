@@ -112,46 +112,46 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #endif
 
 #if (defined _ANDROID_)
-#define QTV_MSG_SPRINTF(a,b)            LOGE(b)
-#define QTV_MSG_SPRINTF_1(a,b,c)        LOGE((b),(c))
-#define QTV_MSG_SPRINTF_2(a,b,c,d)      LOGE((b),(c),(d))
-#define QTV_MSG_SPRINTF_3(a,b,c,d,e)    LOGE((b),(c),(d),(e))
-#define QTV_MSG_SPRINTF_4(a,b,c,d,e,f)  LOGE((b),(c),(d),(e),(f))
+#define QTV_MSG_SPRINTF(a,b)            ALOGE(b)
+#define QTV_MSG_SPRINTF_1(a,b,c)        ALOGE((b),(c))
+#define QTV_MSG_SPRINTF_2(a,b,c,d)      ALOGE((b),(c),(d))
+#define QTV_MSG_SPRINTF_3(a,b,c,d,e)    ALOGE((b),(c),(d),(e))
+#define QTV_MSG_SPRINTF_4(a,b,c,d,e,f)  ALOGE((b),(c),(d),(e),(f))
 #else
-#define QTV_MSG_SPRINTF(a,b)            {LOGE(b); printf("\n");}
-#define QTV_MSG_SPRINTF_1(a,b,c)        {LOGE((b),(c)); printf("\n");}
-#define QTV_MSG_SPRINTF_2(a,b,c,d)      {LOGE((b),(c),(d)); printf("\n");}
-#define QTV_MSG_SPRINTF_3(a,b,c,d,e)    {LOGE((b),(c),(d),(e)); printf("\n");}
-#define QTV_MSG_SPRINTF_4(a,b,c,d,e,f)  {LOGE((b),(c),(d),(e),(f)); printf("\n");}
+#define QTV_MSG_SPRINTF(a,b)            {ALOGE(b); printf("\n");}
+#define QTV_MSG_SPRINTF_1(a,b,c)        {ALOGE((b),(c)); printf("\n");}
+#define QTV_MSG_SPRINTF_2(a,b,c,d)      {ALOGE((b),(c),(d)); printf("\n");}
+#define QTV_MSG_SPRINTF_3(a,b,c,d,e)    {ALOGE((b),(c),(d),(e)); printf("\n");}
+#define QTV_MSG_SPRINTF_4(a,b,c,d,e,f)  {ALOGE((b),(c),(d),(e),(f)); printf("\n");}
 #endif
 
 #if (defined _ANDROID_)  || (LOG_NDEBUG==1)
-#define QTV_MSG(a,b)           LOGV(b)
-#define QTV_MSG1(a,b,c)        LOGV((b),(c))
-#define QTV_MSG2(a,b,c,d)      LOGV((b),(c),(d))
-#define QTV_MSG3(a,b,c,d,e)    LOGV((b),(c),(d),(e))
-#define QTV_MSG4(a,b,c,d,e,f)  LOGV((b),(c),(d),(e),(f))
+#define QTV_MSG(a,b)           ALOGV(b)
+#define QTV_MSG1(a,b,c)        ALOGV((b),(c))
+#define QTV_MSG2(a,b,c,d)      ALOGV((b),(c),(d))
+#define QTV_MSG3(a,b,c,d,e)    ALOGV((b),(c),(d),(e))
+#define QTV_MSG4(a,b,c,d,e,f)  ALOGV((b),(c),(d),(e),(f))
 #else
-#define QTV_MSG(a,b)           {LOGV(b); printf("\n");}
-#define QTV_MSG1(a,b,c)        {LOGV((b),(c)); printf("\n");}
-#define QTV_MSG2(a,b,c,d)      {LOGV((b),(c),(d)); printf("\n");}
-#define QTV_MSG3(a,b,c,d,e)    {LOGV((b),(c),(d),(e)); printf("\n");}
-#define QTV_MSG4(a,b,c,d,e,f)  {LOGV((b),(c),(d),(e),(f)); printf("\n");}
+#define QTV_MSG(a,b)           {ALOGV(b); printf("\n");}
+#define QTV_MSG1(a,b,c)        {ALOGV((b),(c)); printf("\n");}
+#define QTV_MSG2(a,b,c,d)      {ALOGV((b),(c),(d)); printf("\n");}
+#define QTV_MSG3(a,b,c,d,e)    {ALOGV((b),(c),(d),(e)); printf("\n");}
+#define QTV_MSG4(a,b,c,d,e,f)  {ALOGV((b),(c),(d),(e),(f)); printf("\n");}
 #endif
 
-#define LOG_QTVDIAG_PRIO_FATAL                LOGE
-#define LOG_QTVDIAG_PRIO_ERROR                LOGW
-#define LOG_QTVDIAG_PRIO_HIGH                 LOGV
-#define LOG_QTVDIAG_PRIO_MED                  LOGV
-#define LOG_QTVDIAG_PRIO_LOW                  LOGV
-#define LOG_QTVDIAG_PRIO_DEBUG                LOGV
+#define LOG_QTVDIAG_PRIO_FATAL                ALOGE
+#define LOG_QTVDIAG_PRIO_ERROR                ALOGW
+#define LOG_QTVDIAG_PRIO_HIGH                 ALOGV
+#define LOG_QTVDIAG_PRIO_MED                  ALOGV
+#define LOG_QTVDIAG_PRIO_LOW                  ALOGV
+#define LOG_QTVDIAG_PRIO_DEBUG                ALOGV
 
 #ifdef PROFILE_DECODER
 #define QTV_PERF(a)
-#define QTV_PERF_MSG_PRIO(a,b,c)              LOGE((c))
-#define QTV_PERF_MSG_PRIO1(a,b,c,d)           LOGE((c),(d))
-#define QTV_PERF_MSG_PRIO2(a,b,c,d,e)         LOGE((c),(d),(e))
-#define QTV_PERF_MSG_PRIO3(a,b,c,d,e,f)       LOGE((c),(d),(e),(f))
+#define QTV_PERF_MSG_PRIO(a,b,c)              ALOGE((c))
+#define QTV_PERF_MSG_PRIO1(a,b,c,d)           ALOGE((c),(d))
+#define QTV_PERF_MSG_PRIO2(a,b,c,d,e)         ALOGE((c),(d),(e))
+#define QTV_PERF_MSG_PRIO3(a,b,c,d,e,f)       ALOGE((c),(d),(e),(f))
 #else
 #define QTV_PERF(a)
 #define QTV_PERF_MSG_PRIO(a,b,c) //FARF(ALWAYS,(&F, c))
@@ -166,18 +166,18 @@ ADVISED OF THE POSSIBILITY OF SUCH DAMAGE.
 #define MSG_ERROR(a, b)  //FARF(ALWAYS, (&F, a, b))
 #define MSG_ERROR4(a, b, c, d) //FARF(ALWAYS, (&F, a, b, c, d))
 
-//#define ASSERT(x) if (!(x)) {char *pp=0; LOGE("%s:%d *** ERROR ASSERT(0)\n", __FILE__, __LINE__); *pp=0;}
+//#define ASSERT(x) if (!(x)) {char *pp=0; ALOGE("%s:%d *** ERROR ASSERT(0)\n", __FILE__, __LINE__); *pp=0;}
 #if !defined(ASSERT)
-#define ASSERT(x) if (!(x)) {LOGE("%s:%d *** ERROR ASSERT(0)\n", __FILE__, __LINE__);}
+#define ASSERT(x) if (!(x)) {ALOGE("%s:%d *** ERROR ASSERT(0)\n", __FILE__, __LINE__);}
 #endif
 
 #ifndef _ANDROID_
-#define LOGE printf
-#define LOGW printf
-#if (LOG_NDEBUG==1)
-#define LOGV(...)
+#define ALOGE printf
+#define ALOGW printf
+#if (ALOG_NDEBUG==1)
+#define ALOGV(...)
 #else
-#define LOGV printf
+#define ALOGV printf
 #endif
 #endif // _ANDROID_
 

@@ -8030,7 +8030,7 @@ OMX_ERRORTYPE omx_vdec::
           25) == 0) {
          QTV_MSG_PRIO(QTVDIAG_GENERAL, QTVDIAG_PRIO_MED,
                  "VP6 clip \n");
-         LOGE("seq header len %d",buffer->nFilledLen);
+         ALOGE("seq header len %d",buffer->nFilledLen);
          m_vdec_cfg.sequenceHeader =
              (byte *) malloc(buffer->nFilledLen);
          m_vdec_cfg.sequenceHeaderLen = buffer->nFilledLen;

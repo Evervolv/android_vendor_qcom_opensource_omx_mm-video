@@ -50,13 +50,13 @@ extern "C" {
    typedef unsigned long long usecs_t;
 
 #if 0
-#define printp(x...) LOGV(x)
+#define printp(x...) ALOGV(x)
 
 #ifdef PROFILE_DECODER
 #define printx(x...) do {} while (0)
 #else
 #ifdef USE_LOGE_FOR_DECODER
-#define printx(x...) LOGV(x)
+#define printx(x...) ALOGV(x)
 #else
 #define printx(x...) fprintf(stderr, x)
 #endif
